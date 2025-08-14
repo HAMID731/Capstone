@@ -1,0 +1,26 @@
+name: My Node.js Workflow on Windows
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  run-a-script:
+    runs-on: windows-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run script with API key
+        env:
+          MY_API_KEY: ${{ secrets.MY_API_KEY }}
+        run: node my_script.js
