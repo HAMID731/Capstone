@@ -1,8 +1,6 @@
 const fileStorage = require('../utils/fileStorage');
-<<<<<<< HEAD
 const inventorySchema = require('../models/Inventory');
-=======
->>>>>>> 66d7825a5585c06086543776053b992996e02513
+
 
 exports.createItem = async (req, res) => {
     try {

@@ -1,10 +1,8 @@
 import axios from 'axios';
 
-<<<<<<< HEAD
-const API_BASE_URL = 'http://localhost:3000/api';
-=======
-const API_BASE_URL = 'https://project-kpe2.onrender.com/api';
->>>>>>> 66d7825a5585c06086543776053b992996e02513
+
+const API_BASE_URL = 'http://localhost:3000';
+// const API_BASE_URL = 'https://project-kpe2.onrender.com/api';
 
 const apiClient = axios.create({
     baseURL: API_BASE_URL,

@@ -64,11 +64,7 @@ function App() {
                         <Routes>
                             <Route path="/" element={<HomePage />} />
                             <Route path="/login" element={<LoginPage />} />
-<<<<<<< HEAD
-                            <Route path="/register" element={<RegisterBusinessOwnerPage />} />
-=======
                             <Route path="/signup" element={<RegisterBusinessOwnerPage />} />
->>>>>>> 66d7825a5585c06086543776053b992996e02513
                             <Route path="/navbar" element={<Navbar />} />
                             <Route path="/admin-dashboard" element={
                                 <PrivateRoute allowedRoles={['BUSINESS_OWNER']}>

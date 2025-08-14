@@ -19,7 +19,7 @@ router.post('/register/cashier', authorizeRoles('BUSINESS_OWNER'), registerCashi
 router.post('/register/inventorymanager', authorizeRoles('BUSINESS_OWNER'), registerInventoryManager);
 router.get('/profile', getUserProfile);
 router.put('/profile', updateUserProfile);
-router.get('/', authorizeRoles('BUSINESS_OWNER'), getAllUsers); // Get all users
-router.delete('/:id', authorizeRoles('BUSINESS_OWNER'), deleteUser); // Delete a user
+router.get('/', authorizeRoles('BUSINESS_OWNER'), getAllUsers);
+router.delete('/:id', authorizeRoles('BUSINESS_OWNER'), deleteUser);
 
 module.exports = router;
