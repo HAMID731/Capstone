@@ -20,7 +20,6 @@ export const registerInventoryManager = async (userData) => {
     return response.data;
 };
 
-
 export const getAllUsers = async () => {
     const response = await apiClient.get('/auth');
     return response.data;

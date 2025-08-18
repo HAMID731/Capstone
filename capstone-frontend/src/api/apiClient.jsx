@@ -1,8 +1,6 @@
 import axios from 'axios';
 
-
-const API_BASE_URL = 'http://localhost:3000';
-// const API_BASE_URL = 'https://project-kpe2.onrender.com/api';
+const API_BASE_URL = 'http://localhost:3000/api';
 
 const apiClient = axios.create({
     baseURL: API_BASE_URL,
@@ -19,9 +17,7 @@ apiClient.interceptors.request.use(
         }
         return config;
     },
-    (error) => {
-        return Promise.reject(error);
-    }
+    (error) => Promise.reject(error)
 );
 
 apiClient.interceptors.response.use(
@@ -29,7 +25,6 @@ apiClient.interceptors.response.use(
     (error) => {
         if (error.response && error.response.status === 401) {
             console.warn('Unauthorized request. Redirecting to login.');
-
         }
         return Promise.reject(error);
     }

@@ -50,11 +50,7 @@ const fileStorage = {
 
     async create(collectionName, newRecord) {
         const records = await readData(collectionName);
-<<<<<<< HEAD
-        const recordWithId = { id: uuidv4(), ...newRecord }; // Assign a unique ID
-=======
         const recordWithId = { id: uuidv4(), ...newRecord };
->>>>>>> 66d7825a5585c06086543776053b992996e02513
         records.push(recordWithId);
         await writeData(collectionName, records);
         return recordWithId;

@@ -51,7 +51,7 @@ exports.updateItem = async (req, res) => {
 exports.updateItemStock = async (req, res) => {
     try {
         const itemId = req.params.id;
-        const { quantity } = req.body; // Expecting { quantity: newQuantity }
+        const { quantity } = req.body;
 
         if (typeof quantity === 'undefined' || isNaN(parseInt(quantity))) {
             return res.status(400).json({ message: "New quantity is required and must be a number." });
