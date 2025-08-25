@@ -62,7 +62,7 @@ const fileStorage = {
         if (index === -1) {
             return null; 
         }
-        const updatedRecord = { ...records[index], ...updateData, id: id }; // Ensure ID is preserved
+        const updatedRecord = { ...records[index], ...updateData, id: id }; 
         records[index] = updatedRecord;
         await writeData(collectionName, records);
         return updatedRecord;
